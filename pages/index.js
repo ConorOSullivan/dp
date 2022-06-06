@@ -2,7 +2,7 @@ import Head from 'next/head'
 import Image from 'next/image'
 import styles from '../styles/Home.module.css'
 
-const apiSource = process.env.NODE_ENV === 'development' ? 'http://localhost:8080' : 'https://arenas-express-heroku.herokuapp.com/';
+const apiSource = process.env.NODE_ENV === 'development' ? 'http://localhost:8080' : 'https://arenas-express-heroku.herokuapp.com';
 
 export default function Home() {
   console.log(apiSource);
