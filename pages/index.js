@@ -2,7 +2,21 @@ import Head from 'next/head'
 import Image from 'next/image'
 import styles from '../styles/Home.module.css'
 
+const apiSource = process.env.NODE_ENV === 'development' ? 'http://localhost:8080' : 'https://arenas-express-heroku.herokuapp.com/';
+
 export default function Home() {
+  console.log(apiSource);
+  const callAPI = async () => {
+		try {
+      const res = await fetch(apiSource + '/tshirt');
+			const data = await res.json();
+			console.log(data);
+		} catch (err) {
+			console.log(err);
+		}
+	};
+
+
   return (
     <div className={styles.container}>
       <Head>
@@ -29,6 +43,11 @@ export default function Home() {
           <a href="https://reddit.com/r/sandiego" className={styles.card}>
             <h2>r/SanDiego &rarr;</h2>
           </a>
+
+          <div>
+            <button onClick={callAPI}>Make API Call</button>
+          </div>
+
         </div>
       </main>
 
