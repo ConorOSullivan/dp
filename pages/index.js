@@ -21,6 +21,7 @@ export default function Home() {
             src="/outside-manz-invite.svg"
             layout="fill"
             objectFit="contain"
+            quality={100}
           />
         </div>
       </div>
@@ -31,10 +32,12 @@ export default function Home() {
           background-color: rgba(9, 14, 39, 255);
         }
         .container {
-          position: relative;
+          position: absolute;
           width: 100vw;
           height: 100vh;
           overflow: hidden;
+          padding: env(safe-area-inset-top) env(safe-area-inset-right) env(safe-area-inset-bottom) env(safe-area-inset-left);
+          z-index: -1;
         }
         .bg {
           position: absolute;
@@ -47,11 +50,21 @@ export default function Home() {
         }
         .image-container {
           position: relative;
-          height: 100%;
+          height: 100vh;
           width: 100vw;
           padding: env(safe-area-inset-top) 0 env(safe-area-inset-bottom) 0;
           background-color: rgba(9, 14, 39, 255);
           margin-top: env(safe-area-inset-top, 20px);
+        }
+        @media only screen and (min-width: 444px) {
+          .image-container {
+            max-width: 450px;
+            margin: 0 auto;
+            padding: 10% 5rem;
+          }
+          .cta-container {
+            margin: 0 auto;
+          }
         }
       `}</style>
     </>
