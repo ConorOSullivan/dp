@@ -22,6 +22,7 @@ export default function Home() {
             layout="fill"
             objectFit="contain"
             quality={100}
+            width="100%"
           />
         </div>
       </div>
