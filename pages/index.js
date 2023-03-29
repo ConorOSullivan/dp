@@ -26,6 +26,7 @@ export default function Home() {
             </Link>
           </div>
         </div>
+        <audio src="/02. Tame Impala - Endors Toi_sample.mp3" autoPlay />
       </div>
       <style jsx>{`
         body {
