@@ -6,41 +6,49 @@ const apiSource =
   process.env.NODE_ENV === 'development'
     ? 'http://localhost:8080'
     : 'https://arenas-express-heroku.herokuapp.com';
-
+    // <meta name="viewport" content="width=device-width, initial-scale=1" />
 export default function Home() {
   return (
     <>
       <Head>
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover"></meta>
       </Head>
-      <div className="container">
-        <div className="image-container">
-          <Image
-            src="/outside-manz-invite.svg"
-            layout="fill"
-            objectFit="cover"
-            quality={100}
-          />
-        </div>
-        <div className="cta-container">
-          <div className="links-container">
-            <Link href="https://docs.google.com/forms/d/1XC8lm6gycGh1jGdZ4-0Bql559nuUrDiATMyMqnKfs0I">
-              <a className="cta">RSVP here</a>
-            </Link>
-            <Link href="https://www.instagram.com/reel/CdhUlP6IZ_x/?igshid=YmMyMTA2M2Y=">
-              <a className="cta">Media</a>
-            </Link>
+      <body>
+        <div className="container">
+          <div className="image-container">
+            <Image
+              src="/outside-manz-invite.svg"
+              layout="fill"
+              objectFit="cover"
+              quality={100}
+            />
           </div>
+          <div className="cta-container">
+            <div className="links-container">
+              <Link href="https://docs.google.com/forms/d/1XC8lm6gycGh1jGdZ4-0Bql559nuUrDiATMyMqnKfs0I">
+                <a className="cta">RSVP here</a>
+              </Link>
+              <Link href="https://www.instagram.com/reel/CdhUlP6IZ_x/?igshid=YmMyMTA2M2Y=">
+                <a className="cta">Media</a>
+              </Link>
+            </div>
+          </div>
+          <audio src="/02. Tame Impala - Endors Toi_sample.mp3" autoPlay />
         </div>
-        <audio src="/02. Tame Impala - Endors Toi_sample.mp3" autoPlay />
-      </div>
+      </body>
       <style jsx>{`
         body {
           margin: 0;
           padding: 0;
           background-color: rgba(9, 14, 39, 255);
-          height: 100vh;
+          // height: 100vh;
           overflow: hidden;
+        }
+        #body-content {
+          padding: env(safe-area-inset-top)
+             env(safe-area-inset-right)
+             env(safe-area-inset-bottom)
+             env(safe-area-inset-left);
         }
         .container {
           position: absolute;
