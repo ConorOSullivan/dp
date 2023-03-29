@@ -25,6 +25,16 @@ export default function Home() {
             width="100%"
           />
         </div>
+        <div className="cta-container">
+          <div className="links-container">
+            <Link href="https://docs.google.com/forms/d/1XC8lm6gycGh1jGdZ4-0Bql559nuUrDiATMyMqnKfs0I">
+              <a className="cta">RSVP here</a>
+            </Link>
+            <Link href="https://www.instagram.com/reel/CdhUlP6IZ_x/?igshid=YmMyMTA2M2Y=">
+              <a className="cta">Media</a>
+            </Link>
+          </div>
+        </div>
       </div>
       <style jsx>{`
         body {
@@ -36,7 +46,7 @@ export default function Home() {
           position: absolute;
           width: 100vw;
           height: 100vh;
-          overflow: hidden;
+          overflow: auto;
           padding: env(safe-area-inset-top) env(safe-area-inset-right) env(safe-area-inset-bottom) env(safe-area-inset-left);
           z-index: -1;
           top: 0;
@@ -56,10 +66,39 @@ export default function Home() {
         .image-container {
           // position: relative;
           // height: 100vh;
-          // width: 100vw;
+          width: 100vw;
           // padding: env(safe-area-inset-top) 0 env(safe-area-inset-bottom) 0;
           background-color: rgba(9, 14, 39, 255);
           // margin-top: env(safe-area-inset-top, 20px);
+        }
+        .cta-container {
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          right: 0;
+          text-align: center;
+          background-color: rgba(9,14,39,255);
+          color: white;
+          padding: 1em 1em calc(1em + env(safe-area-inset-bottom));
+        }
+        .cta {
+          display: inline-block;
+          padding: 1rem 2rem;
+          background-color: #fffeed;
+          color: black;
+          border-radius: 5px;
+          text-decoration: none;
+          font-color: rgba(9,14,39,255);
+          margin-top: 1rem;
+        }
+        .links-container {
+          display: flex;
+          flex-direction: row;
+          justify-content: space-between;
+          align-items: center;
+          width: 100%;
+          max-width: 400px;
+          margin: 0 auto;
         }
         @media only screen and (min-width: 444px) {
           .image-container {
@@ -92,16 +131,16 @@ export default function Home() {
 //               quality={100}
 //             />
 //           </div>
-//           <div className="cta-container">
-//             <div className="links-container">
-//               <Link href="https://docs.google.com/forms/d/1XC8lm6gycGh1jGdZ4-0Bql559nuUrDiATMyMqnKfs0I">
-//                 <a className="cta">RSVP here</a>
-//               </Link>
-//               <Link href="https://www.instagram.com/reel/CdhUlP6IZ_x/?igshid=YmMyMTA2M2Y=">
-//                 <a className="cta">Media</a>
-//               </Link>
-//             </div>
-//           </div>
+          // <div className="cta-container">
+          //   <div className="links-container">
+          //     <Link href="https://docs.google.com/forms/d/1XC8lm6gycGh1jGdZ4-0Bql559nuUrDiATMyMqnKfs0I">
+          //       <a className="cta">RSVP here</a>
+          //     </Link>
+          //     <Link href="https://www.instagram.com/reel/CdhUlP6IZ_x/?igshid=YmMyMTA2M2Y=">
+          //       <a className="cta">Media</a>
+          //     </Link>
+          //   </div>
+          // </div>
 //           <audio src="/02. Tame Impala - Endors Toi_sample.mp3" autoPlay />
 //         </div>
 //       </body>
