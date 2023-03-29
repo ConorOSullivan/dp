@@ -38,7 +38,7 @@ export default function Home() {
       />;
       // Add the new bubble to the array of bubbles
       setBubbles([...bubbles, newBubble]);
-    }, 1000);
+    }, 5000);
     return () => clearInterval(interval);
   }, [bubbles]);
 
