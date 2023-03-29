@@ -54,7 +54,7 @@ export default function Home() {
         .image-container {
           position: relative;
           height: 100%;
-          padding: 2rem;
+          padding: 5% 2rem;
         }
         .links-container {
           display: flex;
@@ -86,7 +86,7 @@ export default function Home() {
           .image-container {
             max-width: 400px;
             margin: 0 auto;
-            padding: 5rem;
+            padding: 10% 5rem;
           }
         }
       `}</style>
