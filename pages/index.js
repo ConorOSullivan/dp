@@ -37,6 +37,8 @@ export default function Home() {
           margin: 0;
           padding: 0;
           background-color: rgba(9,14,39,255);
+          height: 100vh;
+          overflow: hidden;
         }
         .container {
           position: relative;
@@ -54,7 +56,7 @@ export default function Home() {
         .image-container {
           position: relative;
           height: 100%;
-          padding: 5% 2rem;
+          padding: 2rem 2rem 2rem calc(2rem + env(safe-area-inset-top));
         }
         .links-container {
           display: flex;
