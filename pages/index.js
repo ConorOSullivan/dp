@@ -12,6 +12,7 @@ export default function Home() {
     <>
       <Head>
         <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+        <meta name="theme-color" content="#090E27" />
       </Head>
       <div className="container">
         <div className="bg"></div>
@@ -31,7 +32,7 @@ export default function Home() {
         }
         .container {
           position: relative;
-          width: 100%;
+          width: 100vw;
           height: 100vh;
           overflow: hidden;
         }
@@ -47,7 +48,7 @@ export default function Home() {
         .image-container {
           position: relative;
           height: 100%;
-          width: 100%;
+          width: 100vw;
           padding: env(safe-area-inset-top) 0 env(safe-area-inset-bottom) 0;
           background-color: rgba(9, 14, 39, 255);
           margin-top: env(safe-area-inset-top, 20px);
