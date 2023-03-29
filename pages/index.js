@@ -1,6 +1,5 @@
 import Head from 'next/head'
 import Image from 'next/image'
-import styles from '../styles/Home.module.css'
 import Link from 'next/link';
 
 const apiSource = process.env.NODE_ENV === 'development' ? 'http://localhost:8080' : 'https://arenas-express-heroku.herokuapp.com';
@@ -15,15 +14,20 @@ export default function Home() {
         <div className="bg"></div>
         <div className="image-container">
           <Image
-            src="/outside-manz-invite.jpg"
+            src="/outside-manz-invite.svg"
             layout="fill"
             objectFit="cover"
             quality={100}
           />
           <div className="cta-container">
-            <Link href="https://docs.google.com/forms/d/1XC8lm6gycGh1jGdZ4-0Bql559nuUrDiATMyMqnKfs0I">
-              <a className="cta">RSVP here</a>
-            </Link>
+            <div className="links-container">
+              <Link href="https://docs.google.com/forms/d/1XC8lm6gycGh1jGdZ4-0Bql559nuUrDiATMyMqnKfs0I">
+                <a className="cta">RSVP here</a>
+              </Link>
+              <Link href="https://www.instagram.com/reel/CdhUlP6IZ_x/?igshid=YmMyMTA2M2Y=">
+                <a className="cta">Media</a>
+              </Link>
+            </div>
           </div>
         </div>
         <audio src="/02. Tame Impala - Endors Toi_sample.mp3" autoPlay />
@@ -52,6 +56,12 @@ export default function Home() {
           height: 100%;
           padding: 2rem;
         }
+        .links-container {
+          display: flex;
+          flex-direction: row;
+          justify-content: space-between;
+          align-items: center;
+        }
         .cta-container {
           position: absolute;
           bottom: 0;
@@ -74,7 +84,7 @@ export default function Home() {
         }
         @media only screen and (min-width: 768px) {
           .image-container {
-            max-width: 960px;
+            max-width: 400px;
             margin: 0 auto;
             padding: 5rem;
           }
