@@ -72,7 +72,7 @@ export default function Home() {
           // margin-top: env(safe-area-inset-top, 20px);
         }
         .cta-container {
-          position: absolute;
+          position: fixed;
           bottom: 0;
           left: 0;
           right: 0;
