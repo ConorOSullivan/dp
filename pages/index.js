@@ -31,6 +31,7 @@ export default function Home() {
         }
         .container {
           position: relative;
+          width: calc(100% - env(safe-area-inset-left) - env(safe-area-inset-right));
           height: 100vh;
           overflow: hidden;
         }
