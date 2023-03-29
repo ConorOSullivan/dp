@@ -47,6 +47,7 @@ export default function Home() {
           position: relative;
           height: 100%;
           padding: env(safe-area-inset-top) 0 env(safe-area-inset-bottom) 0;
+          background-color: rgba(9, 14, 39, 255);
         }
       `}</style>
     </>
