@@ -39,6 +39,10 @@ export default function Home() {
           overflow: hidden;
           padding: env(safe-area-inset-top) env(safe-area-inset-right) env(safe-area-inset-bottom) env(safe-area-inset-left);
           z-index: -1;
+          top: 0;
+          left: 0;
+          right: 0;
+          bottom: 0;
         }
         .bg {
           position: absolute;
@@ -50,12 +54,12 @@ export default function Home() {
           z-index: -1;
         }
         .image-container {
-          position: relative;
-          height: 100vh;
-          width: 100vw;
-          padding: env(safe-area-inset-top) 0 env(safe-area-inset-bottom) 0;
+          // position: relative;
+          // height: 100vh;
+          // width: 100vw;
+          // padding: env(safe-area-inset-top) 0 env(safe-area-inset-bottom) 0;
           background-color: rgba(9, 14, 39, 255);
-          margin-top: env(safe-area-inset-top, 20px);
+          // margin-top: env(safe-area-inset-top, 20px);
         }
         @media only screen and (min-width: 444px) {
           .image-container {
