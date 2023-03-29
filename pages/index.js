@@ -1,6 +1,7 @@
 import Head from 'next/head';
 import Image from 'next/image';
 import Link from 'next/link';
+import { useState, useEffect } from 'react';
 
 const apiSource =
   process.env.NODE_ENV === 'development'
@@ -8,6 +9,39 @@ const apiSource =
     : 'https://arenas-express-heroku.herokuapp.com';
 
 export default function Home() {
+  const [bubbles, setBubbles] = useState([]);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      // Generate a random x-coordinate for the bubble
+      const x = Math.floor(Math.random() * 100);
+      // Generate a new bubble with a unique key
+      const newBubble = <div 
+        key={bubbles.length}
+        className="bubble"
+        style={
+          { 
+            left: `${x}%`,
+            position: `absolute`,
+            "background-color": `white`,
+            background: `radial-gradient(circle at top, rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0))`,
+            "border-radius": `50%`,
+            "box-shadow": `0 0 1px rgba(255, 255, 255, 0.5), 0 1px 3px rgba(0, 0, 0, 0.2)`,
+            opacity: `0.8`,
+            "pointer-events": `none`,
+            animation: `bubble-rise 10s infinite`,
+            width: `50px`,
+            height: `50px`,
+            transform: `translateX(-50%)`
+          }
+        }
+      />;
+      // Add the new bubble to the array of bubbles
+      setBubbles([...bubbles, newBubble]);
+    }, 1000);
+    return () => clearInterval(interval);
+  }, [bubbles]);
+
   return (
     <>
       <Head>
@@ -35,16 +69,7 @@ export default function Home() {
             <a className="cta-button-opposite">Get Stoked</a>
           </Link>
         </div>
-        {/* <div className="cta-container">
-          <div className="links-container">
-            <Link href="https://docs.google.com/forms/d/1XC8lm6gycGh1jGdZ4-0Bql559nuUrDiATMyMqnKfs0I">
-              <a className="cta-button-opposite">RSVP here</a>
-            </Link>
-            <Link href="https://www.instagram.com/reel/CdhUlP6IZ_x/?igshid=YmMyMTA2M2Y=">
-              <a className="cta">Media</a>
-            </Link>
-          </div>
-        </div> */}
+        <div className="bubbles-container">{bubbles}</div>
       </div>
       <style jsx>{`
         body {
@@ -79,13 +104,13 @@ export default function Home() {
         .cta-button-opposite {
           display: inline-block;
           padding: 1rem 1rem;
-          background-color: #fff5d4;
-          background: #fff5d4;
-          color: rgba(9,14,39,255);
+          background-color: #9cc28c;
+          background: #9cc28c;
+          color: #f7b964;
           border-radius: 3px;
           text-decoration: none;
           margin-top: 1rem;
-          border: 2px solid rgba(9,14,39,255);
+          border: 2px solid #9cc28c;
           width: 30vw;
           text-align: center;
         }
@@ -129,17 +154,6 @@ export default function Home() {
           padding: 1em 1em calc(1em + env(safe-area-inset-bottom));
           width: 100vw;
         }
-        // .cta-container {
-        //   position: absolute; /* change from fixed */
-        //   bottom: 0;
-        //   left: 0;
-        //   right: 0;
-        //   text-align: center;
-        //   background-color: rgba(9,14,39,0.5); /* 50% transparent */
-        //   color: white;
-        //   padding: 1em 1em calc(1em + env(safe-area-inset-bottom));
-        //   background: rgba(9,14,39,255);
-        // }
         .cta {
           display: inline-block;
           padding: 1rem 2rem;
@@ -167,6 +181,57 @@ export default function Home() {
           }
           .cta-container {
             margin: 0 auto;
+          }
+        }
+        .bubble-container {
+          position: relative;
+          height: 100vh; /* Set the height of the container to the full viewport height */
+          overflow: hidden; /* Hide any bubbles that float too high */
+        }
+        .bubble {
+          position: absolute;
+          background-color: white;
+          background: radial-gradient(circle at top, rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0));
+          border-radius: 50%;
+          box-shadow: 0 0 1px rgba(255, 255, 255, 0.5), 0 1px 3px rgba(0, 0, 0, 0.2);
+          opacity: 0.8;
+          pointer-events: none;
+          animation: bubble-rise 10s infinite;
+          width: 50px;
+          height: 50px;
+          transform: translateX(-50%);
+          // left: 50%; /* Center the bubble horizontally */
+        }
+        .bubble-l1 {
+          position: absolute;
+          background-color: white;
+          background: radial-gradient(circle at top, rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0));
+          border-radius: 50%;
+          box-shadow: 0 0 1px rgba(255, 255, 255, 0.5), 0 1px 3px rgba(0, 0, 0, 0.2);
+          opacity: 0.8;
+          pointer-events: none;
+          animation: bubble-rise 10s infinite;
+          width: 50px;
+          height: 50px;
+          transform: translateX(-50%);
+          left: 20%; /* Center the bubble horizontally */
+        }
+        @keyframes bubble-rise {
+          0% {
+            bottom: 0; /* Start the bubble at the bottom of the container */
+            opacity: 0; /* Set the opacity to 0 so the bubble fades in */
+            transform: translateX(-50%) translateY(0); /* Move the bubble to the center */
+          }
+          10% {
+            opacity: 1; /* Increase the opacity to 1 */
+          }
+          90% {
+            opacity: 1; /* Keep the opacity at 1 */
+          }
+          100% {
+            bottom: 100%; /* Move the bubble to the top of the container */
+            opacity: 0; /* Set the opacity to 0 so the bubble fades out */
+            transform: translateX(-50%) translateY(-100%); /* Move the bubble to the top */
           }
         }
       `}</style>
