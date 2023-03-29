@@ -31,7 +31,7 @@ export default function Home() {
         }
         .container {
           position: relative;
-          width: calc(100% - env(safe-area-inset-left) - env(safe-area-inset-right));
+          width: 100vw;
           height: 100vh;
           overflow: hidden;
         }
@@ -47,7 +47,7 @@ export default function Home() {
         .image-container {
           position: relative;
           height: 100%;
-          width: calc(100% - env(safe-area-inset-left) - env(safe-area-inset-right));
+          width: 100vw;
           padding: env(safe-area-inset-top) 0 env(safe-area-inset-bottom) 0;
           background-color: rgba(9, 14, 39, 255);
           margin-top: env(safe-area-inset-top, 20px);
