@@ -64,33 +64,33 @@ export default function Home() {
           z-index: -1;
         }
         .image-container {
-          // position: relative;
-          // height: 100vh;
+          position: relative;
+          height: 100vh;
           width: 100vw;
           // padding: env(safe-area-inset-top) 0 env(safe-area-inset-bottom) 0;
           background-color: rgba(9, 14, 39, 255);
           // margin-top: env(safe-area-inset-top, 20px);
         }
         .cta-container {
-          position: fixed;
+          position: absolute; /* change from fixed */
           bottom: 0;
           left: 0;
           right: 0;
           text-align: center;
-          background-color: rgba(9,14,39,255);
+          background-color: rgba(9,14,39,0.5); /* 50% transparent */
           color: white;
           padding: 1em 1em calc(1em + env(safe-area-inset-bottom));
-          width: 100vw;
+          background: rgba(9,14,39,255);
         }
         .cta {
           display: inline-block;
           padding: 1rem 2rem;
-          background-color: #fffeed;
-          color: black;
+          background-color: rgba(9,14,39,255);
+          color: white;
           border-radius: 5px;
           text-decoration: none;
-          font-color: rgba(9,14,39,255);
           margin-top: 1rem;
+          border: 2px solid #fffeed;
         }
         .links-container {
           display: flex;
