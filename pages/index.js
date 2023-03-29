@@ -25,22 +25,69 @@ export default function Home() {
             width="100%"
           />
         </div>
-        <div className="cta-container">
+        <div className="left-cta-container">
+          <Link href="https://docs.google.com/forms/d/1XC8lm6gycGh1jGdZ4-0Bql559nuUrDiATMyMqnKfs0I">
+            <a className="cta-button">RSVP Here</a>
+          </Link>
+        </div>
+        <div className="right-cta-container">
+          <Link href="https://www.instagram.com/reel/CdhUlP6IZ_x/?igshid=YmMyMTA2M2Y=">
+            <a className="cta-button-opposite">Get Stoked</a>
+          </Link>
+        </div>
+        {/* <div className="cta-container">
           <div className="links-container">
             <Link href="https://docs.google.com/forms/d/1XC8lm6gycGh1jGdZ4-0Bql559nuUrDiATMyMqnKfs0I">
-              <a className="cta">RSVP here</a>
+              <a className="cta-button-opposite">RSVP here</a>
             </Link>
             <Link href="https://www.instagram.com/reel/CdhUlP6IZ_x/?igshid=YmMyMTA2M2Y=">
               <a className="cta">Media</a>
             </Link>
           </div>
-        </div>
+        </div> */}
       </div>
       <style jsx>{`
         body {
           margin: 0;
           padding: 0;
           background-color: rgba(9, 14, 39, 255);
+        }
+        .left-cta-container {
+          position: absolute;
+          top: 40%;
+          left: 10%;
+          transform: translateY(-50%);
+        }
+        .right-cta-container {
+          position: absolute;
+          bottom: 28%;
+          right: 10%;
+          transform: translateY(-50%);
+        }
+        .cta-button {
+          display: inline-block;
+          padding: 1rem 1rem;
+          background-color: rgba(9,14,39,255);
+          color: #fff5d4;
+          border-radius: 3px;
+          text-decoration: none;
+          margin-top: 1rem;
+          border: 2px solid #fff5d4;
+          width: 30vw;
+          text-align: center;
+        }
+        .cta-button-opposite {
+          display: inline-block;
+          padding: 1rem 1rem;
+          background-color: #fff5d4;
+          background: #fff5d4;
+          color: rgba(9,14,39,255);
+          border-radius: 3px;
+          text-decoration: none;
+          margin-top: 1rem;
+          border: 2px solid rgba(9,14,39,255);
+          width: 30vw;
+          text-align: center;
         }
         .container {
           position: absolute;
@@ -72,16 +119,27 @@ export default function Home() {
           // margin-top: env(safe-area-inset-top, 20px);
         }
         .cta-container {
-          position: absolute; /* change from fixed */
+          position: relative;
           bottom: 0;
           left: 0;
           right: 0;
           text-align: center;
-          background-color: rgba(9,14,39,0.5); /* 50% transparent */
+          background-color: rgba(9,14,39,255);
           color: white;
           padding: 1em 1em calc(1em + env(safe-area-inset-bottom));
-          background: rgba(9,14,39,255);
+          width: 100vw;
         }
+        // .cta-container {
+        //   position: absolute; /* change from fixed */
+        //   bottom: 0;
+        //   left: 0;
+        //   right: 0;
+        //   text-align: center;
+        //   background-color: rgba(9,14,39,0.5); /* 50% transparent */
+        //   color: white;
+        //   padding: 1em 1em calc(1em + env(safe-area-inset-bottom));
+        //   background: rgba(9,14,39,255);
+        // }
         .cta {
           display: inline-block;
           padding: 1rem 2rem;
