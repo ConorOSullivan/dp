@@ -80,6 +80,7 @@ export default function Home() {
           background-color: rgba(9,14,39,255);
           color: white;
           padding: 1em 1em calc(1em + env(safe-area-inset-bottom));
+          width: 100vw;
         }
         .cta {
           display: inline-block;
