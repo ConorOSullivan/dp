@@ -70,6 +70,7 @@ export default function Home() {
           </Link>
         </div>
         <div className="bubbles-container">{bubbles}</div>
+        <audio src="/02. Tame Impala - Endors Toi_sample.mp3" autoPlay />
       </div>
       <style jsx>{`
         body {
