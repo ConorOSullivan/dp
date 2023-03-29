@@ -21,7 +21,7 @@ export default function Home() {
             quality={100}
           />
           <div className="cta-container">
-            <Link href="https://website.com">
+            <Link href="https://docs.google.com/forms/d/1XC8lm6gycGh1jGdZ4-0Bql559nuUrDiATMyMqnKfs0I">
               <a className="cta">RSVP here</a>
             </Link>
           </div>
