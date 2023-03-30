@@ -87,8 +87,8 @@ export default function Home() {
         }
         .right-cta-container {
           position: absolute;
-          bottom: 33%;
-          right: 8%;
+          bottom: 29%;
+          right: 10%;
           transform: translateY(-50%);
         }
         .cta-button {
