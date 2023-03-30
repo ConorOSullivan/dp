@@ -53,7 +53,7 @@ export default function Home() {
         <div className="bg"></div>
         <div className="image-container">
           <Image
-            src="/outside-manz-invite.svg"
+            src="/invite-outside-manz-short-fat.svg"
             layout="fill"
             objectFit="contain"
             quality={100}
