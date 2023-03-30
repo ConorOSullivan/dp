@@ -81,14 +81,14 @@ export default function Home() {
         }
         .left-cta-container {
           position: absolute;
-          top: 40%;
-          left: 10%;
+          top: 50%;
+          left: 13%;
           transform: translateY(-50%);
         }
         .right-cta-container {
           position: absolute;
           bottom: 28%;
-          right: 10%;
+          right: 5%;
           transform: translateY(-50%);
         }
         .cta-button {
@@ -184,4 +184,4 @@ export default function Home() {
       `}</style>
     </>
   );
-}    
+}
