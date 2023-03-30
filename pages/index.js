@@ -61,7 +61,7 @@ export default function Home() {
           />
         </div>
         <div className="left-cta-container">
-          <Link href="https://docs.google.com/forms/d/1XC8lm6gycGh1jGdZ4-0Bql559nuUrDiATMyMqnKfs0I">
+          <Link href="https://docs.google.com/forms/d/e/1FAIpQLSeFIOqKB-TlsehdTna6vVWYxmyVO7gbQg3517Ms1CEwJOCnlw/viewform">
             <a className="cta-button">RSVP Here</a>
           </Link>
         </div>
