@@ -149,7 +149,7 @@ export default function Home() {
           .image-container {
             max-width: 450px;
             margin: 0 auto;
-            padding: 10% 5rem;
+//             padding: 10% 5rem;
           }
           .cta-button {
             width: 100px;
