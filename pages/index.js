@@ -81,13 +81,13 @@ export default function Home() {
         }
         .left-cta-container {
           position: absolute;
-          top: 45%;
+          top: 42%;
           left: 13%;
           transform: translateY(-50%);
         }
         .right-cta-container {
           position: absolute;
-          bottom: 27%;
+          bottom: 33%;
           right: 8%;
           transform: translateY(-50%);
         }
@@ -149,7 +149,7 @@ export default function Home() {
           .image-container {
             max-width: 450px;
             margin: 0 auto;
-//             padding: 10% 5rem;
+            // padding: 10% 5rem;
           }
           .cta-button {
             width: 100px;
