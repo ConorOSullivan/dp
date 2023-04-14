@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import Head from 'next/head';
+import Link from 'next/link';
 import styles from '../styles/Home.module.css';
 import tanShape from '../styles/Shape.module.css';
 import stripesShape from '../styles/Stripes.module.css';
@@ -31,12 +32,29 @@ const Home = () => {
       <img src="/OutsideManzLogo.svg" alt="Outside Manz Logo" className={styles.logo} />
 
       <div className={styles.hamburgerMenu} onClick={toggleMenu}>
-        <div className={styles.hamburgerIcon}></div>
-        <ul className={`${styles.menuList} ${menuVisible ? styles.visible : ''}`}>
-          <li className={styles.menuItem}><a href={RSVPLink}>RSVP Here</a></li>
-          <li className={styles.menuItem}><a href={IGLink}>Get Stoked</a></li>
-          <li className={styles.menuItem}>Lineup - Coming Soon</li>
-        </ul>
+        <div className={styles.hamburgerMenu} onClick={toggleMenu}>
+          <div className={styles.hamburgerIcon}></div>
+          <ul className={`${styles.menuList} ${menuVisible ? styles.visible : ''}`}>
+            <li className={styles.menuItem}>
+              <Link href="/">
+                <a>Home</a>
+              </Link>
+            </li>
+            <li className={styles.menuItem}>
+              <Link href="/event-details">
+                <a>Event Details</a>
+              </Link>
+            </li>
+            <li className={styles.menuItem}><a href={RSVPLink}>RSVP Here</a></li>
+            <li className={styles.menuItem}><a href={IGLink}>Get Stoked</a></li>
+            <li className={styles.menuItem}>Lineup - Coming Soon</li>
+            <li className={styles.menuItem}>
+              <Link href="/outfit-inspo">
+                <a>Outfit Inspiration</a>
+              </Link>
+            </li>
+          </ul>
+        </div>
       </div>
       <a href={RSVPLink}>
         <button className={styles.rsvpButton}>RSVP here</button>
