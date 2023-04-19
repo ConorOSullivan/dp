@@ -64,16 +64,16 @@ const EventDetails = () => {
             <div className={eventStyles.textBox}>
                 <p>You’ve got a ticket to the least exclusive festival of the year! Get ready for food, drinks, music, and vibes. Make sure to don your best festival fit!</p>
                 <b />
-                <b>When<b />: 4pm April 22
+                <b>When</b>: 4pm April 22
                 <br />
                 <br />
-                <b>Where<b />: 518 Arenas
+                <b>Where</b>: 518 Arenas
                 <br />
                 <br />
-                <b>What<b />: Live DJs and a Disco Cave
+                <b>What</b>: Live DJs and a Disco Cave
                 <br />
                 <br />
-                <b>Entrance<b />:
+                <b>Entrance</b>:
                 <br />
                 Parking: Park on Arenas St, and walk around to the back alley.
                 Ubering: Use 518 Glenview Ln as your destination.
