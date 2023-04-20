@@ -122,3 +122,25 @@
   transform: translate(-50%, -50%);
 }
 
+.lineupImageContainer {
+  width: 80%;
+  align-self: center;
+  display: flex;
+  border: black;
+  border: 1px solid black;
+}
+
+.lineupImage {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.lineupImageContainerOuter {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  
+}

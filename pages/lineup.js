@@ -1,11 +1,12 @@
 import React, { useEffect, useState } from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
+import Image from 'next/image';
 import styles from '../styles/Home.module.css';
 import tanShape from '../styles/Shape.module.css';
 import stripesShape from '../styles/Stripes.module.css';
 
-const OutfitInspo = () => {
+const Lineup = () => {
   const [menuVisible, setMenuVisible] = useState(false);
 
   const toggleMenu = () => {
@@ -17,11 +18,9 @@ const OutfitInspo = () => {
   return (
     <div className={styles.container}>
       <Head>
-        <title>Outfit Inspiration</title>
-        <meta name="description" content="Find inspiration for your next outfit" />
+        <title>Lineup</title>
+        <meta name="description" content="The Lineup" />
         <link rel="icon" href="/favicon.ico" />
-        {/* Add the Pinterest script */}
-        <script async defer src="//assets.pinterest.com/js/pinit.js"></script>
       </Head>
 
 
@@ -53,17 +52,13 @@ const OutfitInspo = () => {
           </li>
         </ul>
       </div>
-      <div className={styles.pinterestBoard}>
-        <a
-        data-pin-do="embedBoard"
-        data-pin-board-width="90%"
-        data-pin-scale-height="400"
-        data-pin-scale-width="120"
-        href="https://www.pinterest.com/manzerdancer/outside-manz/"
-        ></a>
+      <div className={styles.lineupImageContainerOuter}>
+        <div className={styles.lineupImageContainer}>
+            <img src="/lineup.png" alt="Lineup" className={styles.lineupImage} />
+        </div>
       </div>
     </div>
   );
 };
 
-export default OutfitInspo;
+export default Lineup;

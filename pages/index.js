@@ -53,6 +53,11 @@ const Home = () => {
                 <a>Outfit Inspiration</a>
               </Link>
             </li>
+            <li className={styles.menuItem}>
+              <Link href="/lineup">
+                <a>Lineup</a>
+              </Link>
+            </li>
           </ul>
         </div>
       </div>
