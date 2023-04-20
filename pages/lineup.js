@@ -30,27 +30,33 @@ const Lineup = () => {
       <div className={stripesShape.stripe1}></div>
 
       <div className={styles.hamburgerMenu} onClick={toggleMenu}>
-        <div className={styles.hamburgerIcon}></div>
-        <ul className={`${styles.menuList} ${menuVisible ? styles.visible : ''}`}>
-          <li className={styles.menuItem}>
-            <Link href="/">
-              <a>Home</a>
-            </Link>
-          </li>
-          <li className={styles.menuItem}><a href={RSVPLink}>RSVP Here</a></li>
-          <li className={styles.menuItem}><a href={IGLink}>Get Stoked</a></li>
-          <li className={styles.menuItem}>Lineup - Coming Soon</li>
-          <li className={styles.menuItem}>
-            <Link href="/outfit-inspo">
-              <a>Outfit Inspiration</a>
-            </Link>
-          </li>
-          <li className={styles.menuItem}>
-            <Link href="/lineup">
-              <a>Lineup</a>
-            </Link>
-          </li>
-        </ul>
+        <div className={styles.hamburgerMenu} onClick={toggleMenu}>
+          <div className={styles.hamburgerIcon}></div>
+          <ul className={`${styles.menuList} ${menuVisible ? styles.visible : ''}`}>
+            <li className={styles.menuItem}>
+              <Link href="/">
+                <a>Home</a>
+              </Link>
+            </li>
+            <li className={styles.menuItem}>
+              <Link href="/event-details">
+                <a>Event Details</a>
+              </Link>
+            </li>
+            <li className={styles.menuItem}><a href={RSVPLink}>RSVP Here</a></li>
+            <li className={styles.menuItem}><a href={IGLink}>Get Stoked</a></li>
+            <li className={styles.menuItem}>
+              <Link href="/outfit-inspo">
+                <a>Outfit Inspiration</a>
+              </Link>
+            </li>
+            <li className={styles.menuItem}>
+              <Link href="/lineup">
+                <a>Lineup</a>
+              </Link>
+            </li>
+          </ul>
+        </div>
       </div>
       <div className={styles.lineupImageContainerOuter}>
         <div className={styles.lineupImageContainer}>

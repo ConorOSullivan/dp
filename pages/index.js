@@ -47,7 +47,6 @@ const Home = () => {
             </li>
             <li className={styles.menuItem}><a href={RSVPLink}>RSVP Here</a></li>
             <li className={styles.menuItem}><a href={IGLink}>Get Stoked</a></li>
-            <li className={styles.menuItem}>Lineup - Coming Soon</li>
             <li className={styles.menuItem}>
               <Link href="/outfit-inspo">
                 <a>Outfit Inspiration</a>

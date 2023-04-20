@@ -43,24 +43,28 @@ const EventDetails = () => {
         <div className={styles.hamburgerMenu} onClick={toggleMenu}>
         <div className={styles.hamburgerIcon}></div>
         <ul className={`${styles.menuList} ${menuVisible ? styles.visible : ''}`}>
-        <li className={styles.menuItem}>
+          <li className={styles.menuItem}>
             <Link href="/">
-            <a>Home</a>
+              <a>Home</a>
             </Link>
-        </li>
-        <li className={styles.menuItem}><a href={RSVPLink}>RSVP Here</a></li>
-        <li className={styles.menuItem}><a href={IGLink}>Get Stoked</a></li>
-        <li className={styles.menuItem}>Lineup - Coming Soon</li>
-        <li className={styles.menuItem}>
+          </li>
+          <li className={styles.menuItem}>
+            <Link href="/event-details">
+              <a>Event Details</a>
+            </Link>
+          </li>
+          <li className={styles.menuItem}><a href={RSVPLink}>RSVP Here</a></li>
+          <li className={styles.menuItem}><a href={IGLink}>Get Stoked</a></li>
+          <li className={styles.menuItem}>
             <Link href="/outfit-inspo">
-            <a>Outfit Inspiration</a>
+              <a>Outfit Inspiration</a>
             </Link>
-        </li>
-        <li className={styles.menuItem}>
+          </li>
+          <li className={styles.menuItem}>
             <Link href="/lineup">
               <a>Lineup</a>
             </Link>
-        </li>
+          </li>
         </ul>
     </div>
 
@@ -75,12 +79,14 @@ const EventDetails = () => {
                 <b>Where</b>: 518 Arenas
                 <br />
                 <br />
-                <b>What</b>: Live DJs and a Disco Cave
+                <b>What</b>: Live DJs and a Disco Den
                 <br />
                 <br />
                 <b>Entrance</b>:
                 <br />
                 Parking: Park on Arenas St, and walk around to the back alley.
+                <br />
+                <br />
                 Ubering: Use 518 Glenview Ln as your destination.
             </div>
         </>
