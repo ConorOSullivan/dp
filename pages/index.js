@@ -15,7 +15,7 @@ const Home = () => {
       <img src="/dynamic-petrophysics-logo.svg" alt="Dynamic Petrophysics Logo" className={styles.logo} />
       
       <div className={styles.linkContainer}>
-        <Link href="https://www.dropbox.com/scl/fi/vubeblkppayy4slhuui5k/U-Pitch-PitchDeck_OSullivan_TransientHighGammaRay_202308_Final.pdf?dl=0&rlkey=vbatipa72ehm8at7qdl5f9hvi" passHref>
+        <Link href="https://www.dropbox.com/scl/fi/fkbaiktnvfhnpemophnr1/U-Pitch-PitchDeck_OSullivan_TransientHighGammaRay_202308_Final.pdf?dl=0&oref=e&r=ACDJTPZCS5dz7jgD91GzYVKs65zFliYJnT5SzUzvOeEc0dk0DHXL-HGpZTEtfT9Ug3FlbwM9uqYRR5-yPXYhENotXhUEKArm_BZwuFir2k99iejiRMRhBlSW3E5T3FEn9HWfLimhBkwnWgCMT-_eJDEgoP2201H308XyGobvnRvf6Zej5XsDd5fjCmHED3bKKdY&sm=1" passHref>
           <a className={styles.linkButton}>Click here to see slide deck</a>
         </Link>
       </div>
